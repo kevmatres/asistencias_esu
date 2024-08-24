@@ -10,18 +10,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container", id="container_main">
+
+    <div class="container" id="container_main">
         <h2>¡ BIENVENIDO !</h2>
         <div class="container_imagen">
             <img src="imagenes/logo.png" alt="logo_esu" id="logo_esu">
             <img src="imagenes/alcaldia.png" alt="logo_alcaldia" id="logo_alcaldia">
         </div>
-        <div class="container_buttons" id="container_buttons_main">
-            <button id="but_creating_meet">CREAR REUNION</button>
+
+        <div class="contenedor_botones" id="container_buttons_main">
+            <button id="bot_crear_reunion">CREAR REUNION</button>
             <button id="but_attendance">SUBIR ASISTENCIA</button>
             <button id="but_trigger_pdf">GENERAR PDF</button>
         </div>
+    </div>
 
-    </div>    
+    <div class="contenedor_formularios">
+        <form id="form_crear_reunion">
+
+            <img src="/imagenes/Logo_horizontal.png" alt="Logo_horizontal" id="imagen_logo_horizontal">
+
+            <h2 id="Tit_crear_reunion">CREAR REUNION</h2>
+    
+            <div id="Codigo_unico"></div>
+    
+            <label for="nombre_completo">Nombre Completo:</label>
+            <input type="text" id="nombre_completo" name="nombre_completo" required>
+    
+            <label for="objetivo_reunion">Objetivo:</label>
+            <input type="text" id="objetivo_reunion" name="objetivo_reunion" required>
+    
+            <label for="responsable">Responsable:</label>
+            <input type="text" id="responsable" name="responsable">
+    
+            <label for="empresa">Empresa:</label>
+            <input type="text" name="empresa" id="empresa">
+    
+            <label for="fecha_reunion">Fecha de la reunion:</label>
+            <input type="date" name="fecha_reunion" id="fecha_reuinion">
+    
+            <label for="hora_inicio">Hora de inicio:</label>
+            <input type="time" name="hora_inicio" id="hora_inicio">
+    
+            <label for="hora_fin">Hora de finalizacion:</label>
+            <input type="time" name="hora_fin" id="hora_fin">
+    
+            <label for="firma_digital">Firma Digital</label>
+            <canvas id="firma_digital" class="canvas_firma" width="450" height="250"></canvas>
+    
+            <div class="contenedor_botones">
+                <button type="button" id="volver">Volver</button>
+                <button type="button" id="limpiar_firma">Limpiar Firma</button>
+                <button type="submit" id="enviar_reunion">Crear Reunión</button>
+            </div>
+        </form>
+    </div>
+    
+
 </body>
 </html>
